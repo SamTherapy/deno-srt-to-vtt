@@ -25,7 +25,6 @@ export default function srt2webvtt(data: string): string {
 }
 
 /**
- * 
  * @param {string} caption SRT section for parsing
  * @returns {string} translated VTT section
  */

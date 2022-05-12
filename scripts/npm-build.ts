@@ -14,7 +14,8 @@ await build({
     // package.json properties
     name: "srt-to-vtt",
     version: Deno.args[0],
-    description: "A library that converts SRT files to VTT equivalents so they can be broadcast on the Internet.",
+    description:
+      "A library that converts SRT files to VTT equivalents so they can be broadcast on the Internet.",
     license: "MIT",
     repository: {
       type: "git",
