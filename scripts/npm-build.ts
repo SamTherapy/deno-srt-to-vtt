@@ -4,7 +4,8 @@ import { build, emptyDir } from "https://deno.land/x/dnt/mod.ts";
 await emptyDir("./npm");
 
 await build({
-  entryPoints: ["./mod.ts"],
+  entryPoints: [ "./mod.ts" ],
+  packageManager: "yarn",
   outDir: "./npm",
   shims: {
     // see JS docs for overview and more options
@@ -12,14 +13,14 @@ await build({
   },
   package: {
     // package.json properties
-    name: "srt-to-vtt",
+    name: "deno-srt-to-vtt",
     version: Deno.args[0],
     description:
-      "A library that converts SRT files to VTT equivalents so they can be broadcast on the Internet.",
+      "A deno library that converts SRT files to VTT equivalents so they can be broadcast on the Internet.",
     license: "MIT",
     repository: {
       type: "git",
-      url: "git+https://git.froth.zone/sam/srt-to-vtt",
+      url: "https://git.froth.zone/sam/srt-to-vtt",
     },
     bugs: {
       url: "https://git.froth.zone/sam/srt-to-vtt/issues",
